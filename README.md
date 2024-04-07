@@ -22,16 +22,10 @@ This Flask-based blog application allows users to create, edit, and delete blog 
    ```
 
 3. Set up the database:
-   ```
-   flask db init
-   flask db migrate
-   flask db upgrade
-   ```
+- uncomment the part in main call in app.py and run the file 
 
 4. Run the application:
-   ```
-   flask run
-   ```
+   - remove the db the part in main call in app.py and run the file 
 
 ## Usage
 
