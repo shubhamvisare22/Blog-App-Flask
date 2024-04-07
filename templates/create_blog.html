@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Blog | Create{% endblock title %}
+
+{% block body %}
+
+<h3 class="alert alert-danger text-center mt-2"> CREATE BLOG </h3>
+
+<form class="mt-5" method="POST" action="/create">
+    <input type="hidden" name="user_id" value="{{ current_user.id }}">
+    
+    <div class="form-group row">
+        <label for="bg_title" class="col-sm-2 col-form-label">Title </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="bg_title" name="bg_title"
+                placeholder="Enter a descriptive title">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="bg_content" class="col-sm-2 col-form-label">Content</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" id="bg_content" name="bg_content" placeholder="Enter your content here"
+                rows="5"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-sm-10 offset-sm-2">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+
+</form>
+
+
+
+
+{% endblock body %}
